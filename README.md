@@ -27,7 +27,7 @@ Replace "INSERT YOUR APP ID HERE" string with id given to you
 
 # Setting User Id
 
-Before calling logEvent or logScreen you need to set  `PapcornsAnalytics.logEvent` with parameters [String:Any] whenever you need to trigger an event like in app purchases or signups etc.. , if there is no parameter then leave it with blank dictionary which is [:] .In event naming convension start with lowercased letter
+Before calling logEvent or logScreen you need to set  `PapcornsAnalytics.setUserId` because everytime you log and event or screen we are adding your userId to it so if you dont have one that may cause some unidenified data in our logs.
 
 ```
 PapcornsAnalytics.setUserId(userId : "")
@@ -94,3 +94,9 @@ OR
 PapcornsAnalytics.logEvent(eventName: "weekly_trial_bought", eventParameters: [:])
 ```
 
+# Before making app live checklist
+
+- Check if every in app purchase is declared in backend script
+- Add backend webhook to revenuecat's webhook part for receipt validation logs
+- Check app id is true for project
+- Check userId is set before log events or log screens
