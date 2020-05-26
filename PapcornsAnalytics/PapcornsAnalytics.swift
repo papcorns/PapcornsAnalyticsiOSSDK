@@ -51,8 +51,8 @@ public class PapcornsAnalytics {
         PapcornsAPILogEvent.init(eventName: eventName, eventParameters: eventParameters).request()
     }
     
-    public static func setUserId(userId : String) {
+    public static func setUserId(userId : String,tools:[PapcornsToolsConfig]) {
         PapcornsConfigManager.shared.config.userId = userId
-        PapcornsAPISetUser.init(userId: userId).request()
+        PapcornsAPISetUser.init(userId: userId,tools: tools).request()
     }
 }

@@ -30,7 +30,7 @@ Replace "INSERT YOUR APP ID HERE" string with id given to you
 Before calling logEvent or logScreen you need to set  `PapcornsAnalytics.setUserId` because everytime you log and event or screen we are adding your userId to it so if you dont have one that may cause some unidenified data in our logs.
 
 ```
-PapcornsAnalytics.setUserId(userId : "")
+PapcornsAnalytics.setUserId(userId : "", tools : [.Adjust(adjustId:Adjust.adid())] )
 ```
 
 ## IMPORTANT !!!!!
