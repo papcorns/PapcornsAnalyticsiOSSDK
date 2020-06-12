@@ -37,6 +37,10 @@ class PapcornsAPISetUser: PapcornsRequest<PapcornsAPISuccess> {
                     if let adjustId = adjustId {
                     tool["adId"] = adjustId
                 }
+                case .AppsFlyer(let uId):
+                    if let uId = uId {
+                    tool["uId"] = uId
+                }
             }
             
             toolsDict.append(tool)

@@ -12,11 +12,14 @@ import AdSupport
 
 public enum PapcornsToolsConfig {
     case Adjust(adId:String?)
+    case AppsFlyer(uid:String?)
     
     var key:String {
         switch self {
         case .Adjust(_):
             return "adjust"
+        case .AppsFlyer(_):
+            return "appsflyer"
         }
     }
 }
