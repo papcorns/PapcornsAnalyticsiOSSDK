@@ -13,13 +13,16 @@ import AdSupport
 public enum PapcornsToolsConfig {
     case Adjust(adId:String?)
     case AppsFlyer(uid:String?)
-    
+	case ABTest(controlGroup:String?,variant: String?)
+	
     var key:String {
         switch self {
         case .Adjust(_):
             return "adjust"
         case .AppsFlyer(_):
             return "appsflyer"
+		case .ABTest(_,_):
+			return "abtest"
         }
     }
 }

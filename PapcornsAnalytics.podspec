@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "PapcornsAnalytics"
-  spec.version      = "1.0.2"
+  spec.version      = "1.0.3"
   spec.summary      = "Papcorns Analytics Tool iOS SDK"
 
   spec.description  = "Internal Papcorns Analytics Tool iOS SDK"

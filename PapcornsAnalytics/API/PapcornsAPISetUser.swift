@@ -35,12 +35,19 @@ class PapcornsAPISetUser: PapcornsRequest<PapcornsAPISuccess> {
             switch config {
                 case .Adjust(let adjustId):
                     if let adjustId = adjustId {
-                    tool["adId"] = adjustId
-                }
+						tool["adId"] = adjustId
+					}
                 case .AppsFlyer(let uId):
                     if let uId = uId {
-                    tool["uId"] = uId
-                }
+						tool["uId"] = uId
+					}
+				case .ABTest(let controlGroup,let variant):
+					if let cGroup = controlGroup {
+						tool["controlGroup"] = cGroup
+					}
+					if let v = variant {
+						tool["variant"] = v
+					}
             }
             
             toolsDict.append(tool)
